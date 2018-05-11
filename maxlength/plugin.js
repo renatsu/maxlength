@@ -73,9 +73,9 @@
 
             setTimeout(function () {
                 if (editor.config.max_length > 0) {
-                    $(".cke_bottom").append("<div style='padding:5px;'><span  id='cke_maxlength_" + editor.name + "'>Caracteres: " + editor.getData().length + '/' + editor.config.max_length + "</span></div>");
+                    $(".cke_bottom").append("<div style='padding:5px;'><span  id='cke_maxlength_" + editor.name + "'>Caracteres: " + editor.document.getBody().getText().length + '/' + editor.config.max_length + "</span></div>");
                 } else {
-                    $(".cke_bottom").append("<div style='padding:5px;'><span  id='cke_maxlength_" + editor.name + "'>Caracteres: " + editor.getData().length + '/' + editor.config.max_length + "</span></div>");
+                    $(".cke_bottom").append("<div style='padding:5px;'><span  id='cke_maxlength_" + editor.name + "'>Caracteres: " + editor.document.getBody().getText().length + '/' + editor.config.max_length + "</span></div>");
                 }
             }, 1000);
 
